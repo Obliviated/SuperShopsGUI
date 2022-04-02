@@ -3,7 +3,7 @@ Lightweight shopping plugin.
 
 
 ## Image
-![image](https://user-images.githubusercontent.com/36128276/161392349-f0137c04-97f1-492b-999c-b2389ec2d7ad.png)
+![image](https://user-images.githubusercontent.com/36128276/161394957-73f7c031-cf0a-4930-b3d4-4ec5e3558bf9.png)
 ![image](https://user-images.githubusercontent.com/36128276/161393752-e9bc40de-8ccb-4ec0-a635-f08b7513b11d.png)
 
 
