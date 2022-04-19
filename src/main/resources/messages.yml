@@ -1,9 +1,0 @@
-# Write 'DISABLED' to disable a message
-# Write '[DISABLE_PREFIX]' to head of message to disable prefix for message
-
-prefix: '&dShop &8» '
-you-dont-have-enough-item: '&cYou don''t have enough item to sell.'
-you-cannot-afford: '&cYou don''t have enough money to buy it.'
-successfully-purchased: '&a{item}&6 successfully purchased for &a{money} TL'
-successfully-sold: '&a{item}&6 successfully sold for &a{money} TL'
-you-dont-have-space: '&cYour inventory doesn''t have enough space to take it.'
