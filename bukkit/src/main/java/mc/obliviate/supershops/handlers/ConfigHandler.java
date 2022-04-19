@@ -8,43 +8,43 @@ import java.io.File;
 
 public class ConfigHandler implements Handler {
 
-	private static final String CONFIG_FILE_NAME = "config.yml";
-	private static final String MESSAGES_FILE_NAME = "messages.yml";
-	private static YamlConfiguration config;
-	private static YamlConfiguration messages;
-	private final SuperShopsGUI plugin;
+    private static final String CONFIG_FILE_NAME = "config.yml";
+    private static final String MESSAGES_FILE_NAME = "messages.yml";
+    private static YamlConfiguration config;
+    private static YamlConfiguration messages;
+    private final SuperShopsGUI plugin;
 
-	public ConfigHandler(SuperShopsGUI plugin) {
-		this.plugin = plugin;
-	}
+    public ConfigHandler(SuperShopsGUI plugin) {
+        this.plugin = plugin;
+    }
 
-	public static YamlConfiguration getConfig() {
-		return config;
-	}
+    public static YamlConfiguration getConfig() {
+        return config;
+    }
 
-	public static YamlConfiguration getMessages() {
-		return messages;
-	}
+    public static YamlConfiguration getMessages() {
+        return messages;
+    }
 
-	@Override
-	public void init() {
-		final File configFile = new File(plugin.getDataFolder() + File.separator + CONFIG_FILE_NAME);
-		final File messagesFile = new File(plugin.getDataFolder() + File.separator + MESSAGES_FILE_NAME);
+    @Override
+    public void init() {
+        final File configFile = new File(plugin.getDataFolder() + File.separator + CONFIG_FILE_NAME);
+        final File messagesFile = new File(plugin.getDataFolder() + File.separator + MESSAGES_FILE_NAME);
 
-		validateFile(configFile);
-		validateFile(messagesFile);
+        validateFile(configFile);
+        validateFile(messagesFile);
 
-		config = YamlConfiguration.loadConfiguration(configFile);
-		messages = YamlConfiguration.loadConfiguration(messagesFile);
+        config = YamlConfiguration.loadConfiguration(configFile);
+        messages = YamlConfiguration.loadConfiguration(messagesFile);
 
-		MessageUtils.setMessageConfig(messages);
+        MessageUtils.setMessageConfig(messages);
 
-	}
+    }
 
-	private void validateFile(final File file) {
-		if (file.exists() || YamlConfiguration.loadConfiguration(file).getKeys(false).isEmpty()) {
-			plugin.saveResource(file.getName(), false);
-		}
-	}
+    private void validateFile(final File file) {
+        if (file.exists() || YamlConfiguration.loadConfiguration(file).getKeys(false).isEmpty()) {
+            plugin.saveResource(file.getName(), false);
+        }
+    }
 
 }

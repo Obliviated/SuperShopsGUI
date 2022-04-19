@@ -9,20 +9,20 @@ import org.bukkit.event.player.PlayerQuitEvent;
 
 public class ConnectionListener implements Listener {
 
-	private final SuperShopsGUI plugin;
+    private final SuperShopsGUI plugin;
 
-	public ConnectionListener(SuperShopsGUI plugin) {
-		this.plugin = plugin;
-	}
+    public ConnectionListener(SuperShopsGUI plugin) {
+        this.plugin = plugin;
+    }
 
-	@EventHandler
-	public void onConnect(PlayerJoinEvent e) {
-		new ShopUser(e.getPlayer().getUniqueId(), 1);
-	}
+    @EventHandler
+    public void onConnect(PlayerJoinEvent e) {
+        new ShopUser(e.getPlayer().getUniqueId(), 1);
+    }
 
-	@EventHandler
-	public void onDisconnect(PlayerQuitEvent e) {
-		ShopUser.getUserMap().remove(e.getPlayer().getUniqueId());
-	}
+    @EventHandler
+    public void onDisconnect(PlayerQuitEvent e) {
+        ShopUser.getUserMap().remove(e.getPlayer().getUniqueId());
+    }
 
 }

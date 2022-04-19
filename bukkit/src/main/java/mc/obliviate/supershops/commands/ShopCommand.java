@@ -7,9 +7,9 @@ import me.despical.commandframework.CommandArguments;
 
 public class ShopCommand {
 
-	@Command(name = "shop", aliases = "market", senderType = Command.SenderType.PLAYER)
-	public void shopCommand(CommandArguments arg) {
-		arg.sendMessage("opening");
-		new ShopGUI(arg.getSender(), Shop.getShops().get("default")).open();
-	}
+    @Command(name = "shop", aliases = "market", senderType = Command.SenderType.PLAYER)
+    public void shopCommand(CommandArguments arg) {
+        arg.sendMessage("opening");
+        new ShopGUI(arg.getSender(), Shop.getShops().get("default")).open();
+    }
 }
