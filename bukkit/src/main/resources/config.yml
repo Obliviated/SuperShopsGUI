@@ -1,0 +1,14 @@
+icons:
+  buy-only:
+    lore:
+      - '&aLeft-click to purchase!'
+  sell-only:
+    lore:
+      - '&aRight-click to sell!'
+  buyable-and-sellable:
+    lore:
+      - '&aLeft click to purchase!'
+      - '&aRight click to sell!'
+  dysfunctional: #unsellable and unbuyable
+    lore:
+      - '&cShopping is disabled for this item.'

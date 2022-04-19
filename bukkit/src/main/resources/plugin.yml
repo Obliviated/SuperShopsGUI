@@ -1,0 +1,7 @@
+main: mc.obliviate.supershops.SuperShopsGUI
+name: SuperShopsGUI
+author: Mr_Obliviate
+soft-depend: [ Vault ]
+api-version: 1.13
+version: 1.0.0-2
+commands:
